@@ -1,10 +1,11 @@
 "use client";
 
 import { Book } from "@/entites";
-import { AverageReview, IncreaseLikes } from "@/features";
+import { AverageReview, CVSparser, IncreaseLikes } from "@/features";
 import { i18n, initializeI18n } from "@/shared/i18n/i18n";
 import {
   Card,
+  CSVbutton,
   ExpandedCard,
   Lanugage,
   Likes,
@@ -36,12 +37,8 @@ export default function Home() {
     async function getBooks(lng: string) {
       try {
         isLoading.current = true;
-        const response = await fetch(
-          `http://localhost:3000/api/${lng}/${seed}?page=1`
-        );
-        const response2 = await fetch(
-          `http://localhost:3000/api/${lng}/${seed}?page=2`
-        );
+        const response = await fetch(`/api/${lng}/${seed}?page=1`);
+        const response2 = await fetch(`/api/${lng}/${seed}?page=2`);
         const data = await response.json();
         const data2 = await response2.json();
         setBooks([...data.books, ...data2.books]);
@@ -61,7 +58,7 @@ export default function Home() {
         isLoading.current = true;
         setLoading(true);
         const response = await fetch(
-          `http://localhost:3000/api/${language}/${seed}?page=${page.current}`
+          `/api/${language}/${seed}?page=${page.current}`
         );
         const data = await response.json();
 
@@ -126,6 +123,7 @@ export default function Home() {
         <Seed seed={seed} setSeed={setSeed} />
         <Likes likes={likes} setLikes={setLikes} />
         <Review review={review} />
+        <CSVbutton books={books} handleExport={CVSparser} />
         <ViewMode
           viewMode={viewMode}
           setViewMode={setViewMode}
