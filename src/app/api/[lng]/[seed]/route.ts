@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { FakerLanguage, GenerateSVG, TitleGenerate } from "@/features";
+import {
+  FakerLanguage,
+  GenerateSentance,
+  GenerateSVG,
+  GenerateTitle,
+} from "@/features";
 import { PER_PAGE } from "@/shared";
 import { Book } from "@/entites";
 
@@ -19,7 +24,7 @@ export async function GET(
     CustomFaker.seed(seed + page);
 
     const books: Book[] = Array.from({ length: PER_PAGE }, (_, i) => {
-      const title = TitleGenerate(CustomFaker);
+      const title = GenerateTitle(CustomFaker);
       const authorsCount = CustomFaker.number.int({ min: 1, max: 3 });
       const reviewsCount = CustomFaker.number.int({ min: 3, max: 6 });
       return {
@@ -35,7 +40,7 @@ export async function GET(
           Math.round(CustomFaker.number.float({ min: 0, max: 10 }) * 10) / 10,
         coverUrl: GenerateSVG(title),
         reviews: Array.from({ length: reviewsCount }, () => ({
-          text: CustomFaker.lorem.sentence(),
+          text: GenerateSentance(CustomFaker),
           reviewer: CustomFaker.person.fullName(),
           company: CustomFaker.company.name(),
         })),
