@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { FakerLanguage, GenerateSVG } from "@/features";
+import { FakerLanguage, GenerateSVG, TitleGenerate } from "@/features";
 import { PER_PAGE } from "@/shared";
 import { Book } from "@/entites";
 
@@ -19,7 +19,7 @@ export async function GET(
     CustomFaker.seed(seed + page);
 
     const books: Book[] = Array.from({ length: PER_PAGE }, (_, i) => {
-      const title = CustomFaker.lorem.words({ min: 1, max: 3 });
+      const title = TitleGenerate(CustomFaker);
       const authorsCount = CustomFaker.number.int({ min: 1, max: 3 });
       const reviewsCount = CustomFaker.number.int({ min: 3, max: 6 });
       return {

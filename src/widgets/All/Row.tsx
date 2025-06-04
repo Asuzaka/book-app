@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export function Widget({ book }: { book: Book }) {
   const [expanded, setExpanded] = useState<boolean>(false);
+  const [liked, setLiked] = useState<boolean>(false);
   const { t } = useTranslation();
   return (
     <div>
@@ -39,8 +40,16 @@ export function Widget({ book }: { book: Book }) {
                 height={192}
                 className="object-contain"
               />
-              <button className="self-center flex w-[50%] rounded-3xl justify-center gap-1 items-center mt-3 bg-blue-500 text-white cursor-pointer">
-                {book.likes} <AiFillLike />
+              <button
+                onClick={() => {
+                  setLiked((prev) => !prev);
+                }}
+                className={`self-center flex w-[50%] rounded-3xl justify-center gap-1 items-center mt-3 ${
+                  liked ? "bg-blue-200 text-blue-500" : "bg-blue-500 text-white"
+                } 
+                cursor-pointer`}
+              >
+                {liked ? book.likes + 1 : book.likes} <AiFillLike />
               </button>
             </div>
             <div>
