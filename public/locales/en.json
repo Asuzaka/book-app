@@ -9,5 +9,8 @@
   "publisher": "Publisher",
   "review": "Review",
   "by": "by",
-  "paperback": "Paperback"
+  "paperback": "Paperback",
+  "text": "Auto-generated review",
+  "reviewer": "System",
+  "company": "N/A"
 }

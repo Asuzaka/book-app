@@ -9,5 +9,8 @@
   "publisher": "出版社",
   "review": "レビュー",
   "by": "著",
-  "paperback": "ペーパーバック"
+  "paperback": "ペーパーバック",
+  "text": "自動生成されたレビュー",
+  "reviewer": "システム",
+  "company": "該当なし"
 }

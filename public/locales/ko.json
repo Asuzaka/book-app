@@ -9,5 +9,8 @@
   "publisher": "출판사",
   "review": "리뷰",
   "by": "작성자",
-  "paperback": "페이퍼백"
+  "paperback": "페이퍼백",
+  "text": "자동 생성된 리뷰",
+  "reviewer": "시스템",
+  "company": "해당 없음"
 }

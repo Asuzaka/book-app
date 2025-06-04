@@ -122,7 +122,7 @@ export default function Home() {
         <Lanugage />
         <Seed seed={seed} setSeed={setSeed} />
         <Likes likes={likes} setLikes={setLikes} />
-        <Review review={review} />
+        <Review review={review} setBooks={setBooks} />
         <CSVbutton books={books} handleExport={CVSparser} />
         <ViewMode
           viewMode={viewMode}
