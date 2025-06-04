@@ -1,0 +1,13 @@
+{
+  "language": "Sprache",
+  "loadingLang": "Sprache wird geändert...",
+  "seed": "Seed",
+  "likes": "Gefällt mir",
+  "isbn": "ISBN",
+  "title": "Titel",
+  "authors": "Autor(en)",
+  "publisher": "Verlag",
+  "review": "Rezension",
+  "by": "von",
+  "paperback": "Taschenbuch"
+}

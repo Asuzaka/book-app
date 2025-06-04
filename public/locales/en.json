@@ -1,0 +1,13 @@
+{
+  "language": "Language",
+  "loadingLang": "Changing language...",
+  "seed": "Seed",
+  "likes": "Likes",
+  "isbn": "ISBN",
+  "title": "Title",
+  "authors": "Author(s)",
+  "publisher": "Publisher",
+  "review": "Review",
+  "by": "by",
+  "paperback": "Paperback"
+}

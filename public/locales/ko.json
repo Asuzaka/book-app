@@ -1,0 +1,13 @@
+{
+  "language": "언어",
+  "loadingLang": "언어 변경 중...",
+  "seed": "시드",
+  "likes": "좋아요",
+  "isbn": "ISBN",
+  "title": "제목",
+  "authors": "저자",
+  "publisher": "출판사",
+  "review": "리뷰",
+  "by": "작성자",
+  "paperback": "페이퍼백"
+}

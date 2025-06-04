@@ -1,0 +1,13 @@
+{
+  "language": "Langue",
+  "loadingLang": "Changement de langue...",
+  "seed": "Graine",
+  "likes": "J'aime",
+  "isbn": "ISBN",
+  "title": "Titre",
+  "authors": "Auteur(s)",
+  "publisher": "Éditeur",
+  "review": "Critique",
+  "by": "par",
+  "paperback": "Broché"
+}

@@ -1,0 +1,13 @@
+{
+  "language": "Язык",
+  "loadingLang": "Изменяем язык...",
+  "seed": "Сид",
+  "likes": "Лайки",
+  "isbn": "ISBN",
+  "title": "Название",
+  "authors": "Автор(ы)",
+  "publisher": "Издатель",
+  "review": "Рецензия",
+  "by": "от",
+  "paperback": "Мягкая обложка"
+}
